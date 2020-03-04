@@ -1,0 +1,464 @@
+@import url("../assets/fonts/sifonn/style.css");
+@import url("../assets/fonts/montserrat/stylesheet.css");
+.navbar {
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #fff;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar .container {
+  position: relative;
+}
+.navbar-brand-logo {
+  height: 32px;
+}
+.navbar-menu-icon {
+  width: 36px;
+  height: 24px;
+  position: absolute;
+  left: 100%;
+  z-index: 10000;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+  transform: translateX(calc(-100% + 16px));
+}
+.navbar-menu-icon div {
+  width: 100%;
+  height: calc((32px / 3) - 9px);
+  background-color: #E85624;
+  transform-origin: right center;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navbar-menu-icon div:nth-child(1) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scaleX(0.8);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navbar-menu-icon div:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  transform: scaleX(0.7);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navbar-menu-icon div:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: scaleX(0.9);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navbar-menu-icon:hover div {
+  transform: scaleX(1);
+}
+.navbar .open-menu {
+  left: 0;
+  transform: rotate(180deg);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navbar .open-menu div {
+  background-color: #fff;
+}
+.navbar .open-menu div:nth-child(1) {
+  transform-origin: center center;
+  transform: rotate(45deg) translateY(-50%);
+  top: 50%;
+}
+.navbar .open-menu div:nth-child(2) {
+  transform-origin: center center;
+  transform: scaleX(0);
+  opacity: 0;
+}
+.navbar .open-menu div:nth-child(3) {
+  transform-origin: center center;
+  transform: rotate(-45deg) translateY(-50%);
+  top: 50%;
+}
+.navbar-collapsed {
+  width: 100%;
+  height: 100vh;
+  background-color: #E85624;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform-origin: center top;
+  transform: scaleY(0);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+}
+.navbar-collapsed-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar-collapsed-link {
+  font-family: "Sifonn Pro";
+  text-transform: uppercase;
+  color: #512461;
+  font-size: 48px;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navbar-collapsed-link:hover {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 32px;
+}
+
+.open-collapsed {
+  transform: scaleY(1);
+}
+
+.hide-nav {
+  z-index: 99999;
+  background-color: transparent;
+  box-shadow: none;
+}
+.hide-nav .navbar-brand {
+  pointer-events: none;
+}
+.hide-nav .navbar-brand-logo {
+  visibility: hidden;
+}
+
+.home .row {
+  height: 75vh;
+}
+@media screen and (max-width: 480px) {
+  .home .row {
+    height: 50vh;
+  }
+}
+.home-left {
+  background-image: url("../assets/img/space-desk-workspace-coworking.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 128px;
+  filter: grayscale(1);
+  transition: all 0.5s ease;
+}
+.home-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.home-title {
+  font-family: "Sifonn Pro";
+  font-size: 56px;
+  text-transform: uppercase;
+  color: #E85624;
+  position: relative;
+  left: -80px;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@media screen and (max-width: 480px) {
+  .home-title {
+    font-size: 28px;
+    left: -40px;
+  }
+}
+.home-text {
+  font-family: "Montserrat";
+}
+@media screen and (max-width: 480px) {
+  .home-text {
+    display: none;
+  }
+}
+.home:hover .home-title {
+  left: -56px;
+}
+@media screen and (max-width: 480px) {
+  .home:hover .home-title {
+    left: -32px;
+  }
+}
+.home:hover .home-left {
+  filter: grayscale(0);
+}
+
+.numbers {
+  padding: 128px 0;
+}
+@media screen and (max-width: 480px) {
+  .numbers {
+    padding: 64px 0;
+  }
+}
+.numbers .card {
+  border: none;
+  border-radius: 0;
+  background-color: #E85624;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@media screen and (max-width: 480px) {
+  .numbers .card {
+    margin-bottom: 16px;
+  }
+}
+.numbers .card-icon {
+  height: 56px;
+  margin-bottom: 12px;
+}
+.numbers .card-title {
+  font-family: "Sifonn Pro";
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 4px;
+}
+.numbers .card-subtitle {
+  font-family: "Montserrat";
+  font-weight: 300;
+  color: #fff;
+}
+
+.what {
+  padding: 64px 0;
+  background-color: #512461;
+}
+.what .accordion .card {
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+}
+.what .accordion .card-header {
+  background-color: #fff;
+  border: none;
+  font-family: "Sifonn Pro";
+}
+.what .accordion .card-header button {
+  color: #E85624;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.what .accordion .card-icon {
+  transform: rotate(180deg);
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.what .accordion .card .open {
+  transform: rotate(0deg);
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.what .accordion .card-body {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 14px;
+  padding-top: 0;
+}
+.what .accordion .card-body-title {
+  text-transform: uppercase;
+  font-family: "Sifonn Pro";
+  color: #512461;
+}
+.what .accordion .card-body strong {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.who {
+  padding: 64px 0;
+}
+.who-profile {
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  .who-profile {
+    margin-bottom: 16px;
+  }
+}
+.who-profile-pic {
+  width: 100%;
+  transform-origin: right top;
+  transform: scale(0.9);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.who-profile-pic:hover {
+  transform: scale(1);
+}
+.who-profile-content {
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #512461;
+  padding: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.who-profile-content-name {
+  margin: 0;
+  color: #E85624;
+  font-family: "Sifonn Pro";
+  text-transform: uppercase;
+  line-height: 1;
+}
+.who-profile-content-job {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1;
+}
+.who-profile-content-contact {
+  font-size: 12px;
+  color: #E85624;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.who-profile-content-contact:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.how {
+  padding: 64px 0;
+  background-color: #E85624;
+}
+.how-desc {
+  color: #fff;
+  font-weight: 300;
+}
+.how-desc b {
+  font-weight: 600;
+}
+.how .card {
+  border: none;
+  border-radius: 0;
+  background-color: #512461;
+  min-height: 230px;
+  margin-bottom: 32px;
+  transform: scale(1);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.how .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 480px) {
+  .how .card {
+    margin-bottom: 16px;
+  }
+}
+.how .card-icon {
+  height: 56px;
+  margin-bottom: 12px;
+}
+.how .card-title {
+  font-family: "Sifonn Pro";
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 12px;
+}
+.how .card-subtitle {
+  font-family: "Montserrat";
+  font-weight: 300;
+  color: #fff;
+}
+
+html, body {
+  font-family: "Montserrat";
+  color: #333;
+}
+
+.main-link {
+  font-family: "Sifonn Pro";
+  color: #E85624;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid #E85624;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 40px;
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@media screen and (max-width: 480px) {
+  .main-link {
+    width: 70%;
+  }
+}
+.main-link span {
+  position: relative;
+  z-index: 10;
+}
+.main-link::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background-color: #E85624;
+  position: absolute;
+  z-index: 1;
+  transform-origin: center bottom;
+  transform: scaleY(0);
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.main-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.main-link:hover::after {
+  transform: scaleY(1);
+}
+
+.titleBox-title {
+  font-family: "Sifonn Pro";
+  text-transform: uppercase;
+  color: #fff;
+}
+.titleBox-title span {
+  color: #E85624;
+}
+.titleBox-small {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
+}
+@media screen and (max-width: 480px) {
+  .titleBox {
+    margin-bottom: 32px;
+  }
+}
+
+.whiteText {
+  color: #fff !important;
+}
+
+.purpleText {
+  color: #512461 !important;
+}
+
+.orangeText {
+  color: #E85624 !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=main.css.map */

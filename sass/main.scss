@@ -1,0 +1,100 @@
+@import 'variables';
+@import 'mixins';
+
+//Views
+@import 'views/nav';
+@import 'views/home';
+@import 'views/numbers';
+@import 'views/what';
+@import 'views/who';
+@import 'views/how';
+
+html, body {
+    font-family: $montserrat;
+    color: #333;
+}
+
+.main-link {
+    font-family: $sifonn;
+    color: $orange;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid $orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 40px;
+    line-height: 1;
+    text-align: center;
+    position: relative;
+    transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    @include mobile {
+        width: 70%;
+    }
+
+    span {
+        position: relative;
+        z-index: 10;
+    }
+
+    &::after {
+        content: " ";
+        width: 100%;
+        height: 100%;
+        background-color: $orange;
+        position: absolute;
+        z-index: 1;
+        transform-origin: center bottom;
+        transform: scaleY(0);
+        transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+
+        &::after {
+            transform: scaleY(1);
+        }
+    }
+}
+
+.titleBox {
+    &-title {
+        font-family: $sifonn;
+        text-transform: uppercase;
+        color: #fff;
+
+        span {
+            color: $orange;
+        }
+    }
+
+    &-small {
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 300;
+    }
+
+    @include mobile {
+        margin-bottom: 32px;
+    }
+}
+
+.whiteText {
+    color: #fff !important;
+}
+
+.purpleText {
+    color: $purple !important;
+}
+
+.orangeText {
+    color: $orange !important;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}

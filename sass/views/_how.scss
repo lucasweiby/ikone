@@ -1,0 +1,51 @@
+.how {
+    padding: 64px 0;
+    background-color: $orange;
+
+    &-desc {
+        color: #fff;
+        font-weight: 300;
+
+        b {
+            font-weight: 600;
+        }
+    }
+
+    .card {
+        border: none;
+        border-radius: 0;
+        background-color: $purple;
+        min-height: 230px;
+        margin-bottom: 32px;
+        transform: scale(1);
+        transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+        }
+
+        @include mobile {
+            margin-bottom: 16px;
+        }
+
+        &-icon {
+            height: 56px;
+            margin-bottom: 12px;
+        }
+
+        &-title {
+            font-family: $sifonn;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 0;
+            margin-bottom: 12px;
+        }
+
+        &-subtitle {
+            font-family: $montserrat;
+            font-weight: 300;
+            color: #fff;
+        }
+    }  
+}

@@ -1,0 +1,63 @@
+.home {
+    .row {
+        height: 75vh;    
+
+        @include mobile {
+            height: 50vh;
+        }
+    }
+
+    &-left {
+        background-image: url('../assets/img/space-desk-workspace-coworking.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-bottom-right-radius: 128px;
+        filter: grayscale(1);
+        transition: all .5s ease;
+    }
+
+    &-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    &-title {
+        font-family: $sifonn;
+        font-size: 56px;
+        text-transform: uppercase;
+        color: $orange;
+        position: relative;
+        left: -80px;
+        transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        @include mobile {
+            font-size: 28px;
+            left: -40px;
+        }
+    }
+
+    &-text {
+        font-family: $montserrat;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &:hover {
+        .home-title {
+            left: -56px;
+
+            @include mobile {
+                left: -32px;
+            }
+        }
+
+        .home-left {
+            filter: grayscale(0);
+        }
+    } 
+}

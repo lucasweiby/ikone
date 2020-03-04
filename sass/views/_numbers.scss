@@ -1,0 +1,37 @@
+.numbers {
+    padding: 128px 0;
+
+    @include mobile {
+        padding: 64px 0;
+    }
+
+    .card {
+        border: none;
+        border-radius: 0;
+        background-color: $orange;
+        transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        @include mobile {
+            margin-bottom: 16px;
+        }
+
+        &-icon {
+            height: 56px;
+            margin-bottom: 12px;
+        }
+
+        &-title {
+            font-family: $sifonn;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 0;
+            margin-bottom: 4px;
+        }
+
+        &-subtitle {
+            font-family: $montserrat;
+            font-weight: 300;
+            color: #fff;
+        }
+    }   
+}
