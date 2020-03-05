@@ -13,10 +13,19 @@ $(document).ready(function() {
         distance: '100px',
         interval: '500'
     };
+
+    var slideRight = {
+        distance: '150%',
+        origin: 'left',
+        distance: '100px',
+        interval: '500'
+    };
     
     ScrollReveal().reveal('.numbers-card', slideUp);
     ScrollReveal().reveal('.accordion .card', slideLeft);
     ScrollReveal().reveal('.how-card', slideUp);
+    ScrollReveal().reveal('.who-profile.left', slideRight);
+    ScrollReveal().reveal('.who-profile.right', slideLeft);
 
     $('.accordion .collapse').on('shown.bs.collapse', function () {
         $('.accordion .card-header button .card-icon').addClass('open');

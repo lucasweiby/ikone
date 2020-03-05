@@ -1,0 +1,91 @@
+.where {
+    padding: 64px 0;
+
+    .titleBox {
+        @include mobile {
+            margin-top: 16px;
+            margin-bottom: 0;
+        }
+    }
+
+    &-text {
+        margin-bottom: 4px;
+    }
+
+    &-more {
+        font-family: $sifonn;
+        text-transform: uppercase;
+        color: $orange;
+        transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        &:hover {
+            text-decoration: none;
+            color: $purple;
+        }
+    }
+
+    &-address-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-family: $sifonn;
+    }
+
+    &-address-link {
+        color: $purple;
+        transition: all .2s ease;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        &:hover {
+            color: $orange;
+            text-decoration: none;
+        }
+    }
+
+    &-address-item {
+        margin-bottom: 8px;
+
+        @include mobile {
+            font-size: 14px;
+        }
+
+        &-icon {
+            height: 24px;
+            display: block;
+            margin: 0 auto;
+            
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .col-11 {
+            @include mobile {
+                padding-left: 16px !important;
+            }
+        }
+    }
+
+    &-social {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 16px;
+        display: flex;
+
+        &-link {
+            color: $orange;
+            text-decoration: none;
+            transition: all .2s ease-in-out;
+            font-size: 20px;
+            margin-right: 8px;
+
+            &:hover {
+                color: $purple;
+            }
+        }
+    }
+}

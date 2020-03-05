@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     z-index: 9999;
-    width: 100%;
+    width: 100vw;
     background-color: #fff;
     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     // border-bottom: 2px solid $orange;
@@ -12,6 +12,10 @@
 
     .container {
         position: relative;
+
+        @include mobile {
+            width: 80%;
+        }
     }
 
     &-brand {
@@ -29,6 +33,10 @@
         transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
         cursor: pointer;
         transform: translateX(calc(-100% + 16px));
+
+        @include mobile {
+            transform: translateX(-100%); 
+        }
 
         div {
             width: 100%;

@@ -1,0 +1,44 @@
+.why {
+    padding: 64px 0;
+    position: relative;
+
+    @include mobile {
+        padding: 0 0 64px;
+    }
+
+    &::before {
+        content: " ";
+        height: 256px;
+        width: 30%;
+        background-image: url('../assets/icons/details-left.svg');
+        background-size: contain;
+        background-position: 0 center;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: " ";
+        height: 256px;
+        width: 30%;
+        background-image: url('../assets/icons/details-right.svg');
+        background-size: contain;
+        background-position: 100% center;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include mobile {
+            display: none;
+        }
+    }
+}
