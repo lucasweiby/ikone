@@ -21,6 +21,10 @@
             border-radius: 0;
             margin-bottom: 4px;
             position: relative;
+
+            @include mobile {
+                font-size: 14px;
+            }
         }
 
         .nav-link.active {
@@ -45,8 +49,8 @@
             padding: 16px;
             position: relative;
 
-            .slick-slide {
-                width: auto !important;
+            @include mobile {
+                margin-left: 16px;
             }
 
             &-gallery {
@@ -55,6 +59,11 @@
                 &-img {
                     height: 156px;
                     margin: 0;
+
+                    @include mobile {
+                        width: 100%;
+                        height: auto;
+                    }
                 }
             }
 
@@ -87,6 +96,10 @@
                     margin: 0;
                     list-style: none;
                     font-family: $montserrat;
+
+                    @include mobile {
+                        flex-direction: column;
+                    }
 
                     &-link {
                         margin-right: 8px;

@@ -162,6 +162,7 @@
 @media screen and (max-width: 480px) {
   .home-left .home-slide {
     border-bottom-right-radius: 64px;
+    height: 50vh;
   }
 }
 .home-right {
@@ -594,6 +595,11 @@
   margin-bottom: 4px;
   position: relative;
 }
+@media screen and (max-width: 480px) {
+  .for-who-pills .nav-link {
+    font-size: 14px;
+  }
+}
 .for-who-pills .nav-link.active {
   color: #fff;
   background-color: #E85624;
@@ -614,8 +620,10 @@
   padding: 16px;
   position: relative;
 }
-.for-who-pills .tab-pane .slick-slide {
-  width: auto !important;
+@media screen and (max-width: 480px) {
+  .for-who-pills .tab-pane {
+    margin-left: 16px;
+  }
 }
 .for-who-pills .tab-pane-gallery {
   width: 100%;
@@ -623,6 +631,12 @@
 .for-who-pills .tab-pane-gallery-img {
   height: 156px;
   margin: 0;
+}
+@media screen and (max-width: 480px) {
+  .for-who-pills .tab-pane-gallery-img {
+    width: 100%;
+    height: auto;
+  }
 }
 .for-who-pills .tab-pane-info {
   font-family: "Montserrat";
@@ -649,6 +663,11 @@
   list-style: none;
   font-family: "Montserrat";
 }
+@media screen and (max-width: 480px) {
+  .for-who-pills .tab-pane-more-social {
+    flex-direction: column;
+  }
+}
 .for-who-pills .tab-pane-more-social-link {
   margin-right: 8px;
   text-decoration: none;
@@ -657,6 +676,39 @@
 }
 .for-who-pills .tab-pane-more-social-link:hover {
   color: #E85624;
+  text-decoration: none;
+}
+
+.footer {
+  padding: 32px 0;
+  background-color: #E85624;
+}
+@media screen and (max-width: 480px) {
+  .footer-logo {
+    width: 50%;
+    display: block;
+    margin: 0 auto 32px;
+  }
+}
+.footer-copy {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 300;
+}
+@media screen and (max-width: 480px) {
+  .footer-copy {
+    text-align: center;
+  }
+}
+.footer-copy b {
+  font-weight: 600;
+}
+.footer-copy-link {
+  color: #512461;
+}
+.footer-copy-link:hover {
+  color: #512461;
   text-decoration: none;
 }
 

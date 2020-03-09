@@ -1,0 +1,36 @@
+.footer {
+    padding: 32px 0;
+    background-color: $orange;
+
+    &-logo {
+        @include mobile {
+            width: 50%;
+            display: block;
+            margin: 0 auto 32px;
+        }
+    }
+
+    &-copy {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #fff;
+        font-weight: 300;
+
+        @include mobile {
+            text-align: center;
+        }
+
+        b {
+            font-weight: 600;
+        }
+
+        &-link {
+            color: $purple;
+
+            &:hover {
+                color: $purple;
+                text-decoration: none;
+            }
+        }
+    }
+}
