@@ -8,6 +8,9 @@
     <script src="https://kit.fontawesome.com/df5e7b877c.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="node_modules/lightbox2/dist/css/lightbox.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -50,10 +53,18 @@
     <section class="home">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 col-6 home-left px-0"></div>
+                <div class="col-md-6 col-6 home-left px-0">
+                    <div class="home-slide" style="background-image: url('assets/img/both.jpg');"></div>
+                    <div class="home-slide" style="background-image: url('assets/img/Fotos tratadas/129A3744.jpg');"></div>
+                    <div class="home-slide" style="background-image: url('assets/img/Fotos tratadas/129A3750.jpg');"></div>
+                    <div class="home-slide" style="background-image: url('assets/img/Fotos tratadas/129A3762.jpg');"></div>
+                    <div class="home-slide" style="background-image: url('assets/img/Fotos tratadas/129A3772.jpg');"></div>
+                    <div class="home-slide" style="background-image: url('assets/img/Fotos tratadas/129A3777.jpg');"></div>
+                    <div class="home-slide" style="background-image: url('assets/img/Fotos tratadas/129A3780.jpg');"></div>
+                </div>
                 <div class="col-md-4 col-6 home-right">
-                    <h1 class="home-title">Lorem ipsum dolor sit amet consectetur.</h1>
-                    <p class="home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, ad facilis consequuntur dolorum culpa reiciendis molestias ipsa modi nisi quidem.</p>
+                    <h1 class="home-title">Fazer diferente, inovar!</h1>
+                    <p class="home-text">Sempre com soluções inovadoras e personalizadas, a Ikone Eventos busca a fidelização de seus clientes e trabalha num “ciclo de retorno”, em que eventos organizados há mais de 10 anos voltam ao Ceará para uma nova parceria com a nossa empresa.</p>
                     <a href="#0" class="main-link"><span>Saiba mais</span></a>
                 </div>
             </div>
@@ -194,7 +205,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-3 col-sm-8 col-xs-8 col-8">
                     <div class="who-profile left">
-                        <img src="assets/img/roberta@2x.png" alt="" class="who-profile-pic">
+                        <img src="assets/img/roberta_2.png" alt="" class="who-profile-pic">
                         <div class="who-profile-content">
                             <p class="who-profile-content-name">Roberta Cavalcante</p>
                             <small class="who-profile-content-job">Engenheira e Advogada</small>
@@ -207,7 +218,7 @@
                 <div class="col-1"></div>
                 <div class="col-md-3 col-sm-8 col-xs-8 col-8">
                     <div class="who-profile right">
-                        <img src="assets/img/micheline@2x.png" alt="" class="who-profile-pic">
+                        <img src="assets/img/micheline_2.png" alt="" class="who-profile-pic">
                         <div class="who-profile-content">
                             <p class="who-profile-content-name">Micheline Camarço</p>
                             <small class="who-profile-content-job">Turismóloga</small>
@@ -375,23 +386,84 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-                                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                    <div class="titleBox text-center">
+                        <h6 class="titleBox-small">Para quem</h6>
+                        <h1 class="titleBox-title orangeText">Seja qual for o <span class="whiteText">tamanho</span> do seu evento, ele pode levar a <span class="whiteText">assinatura da Ikone</span>!</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-4">
+                    <h5 class="for-who-year">2020</h5>
+                </div>
+            </div>
+            <div class="row for-who-pills">
+                <div class="col-3">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-autop-tab" data-toggle="pill" href="#v-pills-autop" role="tab" aria-controls="v-pills-autop" aria-selected="false">AUTOP</a>
+                        <a class="nav-link" id="v-pills-conenx-tab" data-toggle="pill" href="#v-pills-conenx" role="tab" aria-controls="v-pills-conenx" aria-selected="true">Conenx</a>
+                        <a class="nav-link" id="v-pills-eba2020-tab" data-toggle="pill" href="#v-pills-eba2020" role="tab" aria-controls="v-pills-eba2020" aria-selected="false">EBA 2020</a>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-autop" role="tabpanel" aria-labelledby="v-pills-autop-tab">
+                            <div class="tab-pane-gallery">
+                                <a href="assets/img/Fotos tratadas/129A3744.jpg" data-lightbox="roadtrip" data-title="AUTOP 2020">
+                                    <img src="assets/img/Fotos tratadas/129A3744.jpg" alt="" class="tab-pane-gallery-img">
+                                </a>
+                                <a href="assets/img/Fotos tratadas/129A3750.jpg" data-lightbox="roadtrip" data-title="AUTOP 2020">
+                                    <img src="assets/img/Fotos tratadas/129A3750.jpg" alt="" class="tab-pane-gallery-img">
+                                </a>
+                                <a href="ssets/img/Fotos tratadas/129A3762.jpg" data-lightbox="roadtrip" data-title="AUTOP 2020">
+                                    <img src="assets/img/Fotos tratadas/129A3762.jpg" alt="" class="tab-pane-gallery-img">
+                                </a>
+                                <a href="assets/img/Fotos tratadas/129A3772.jpg" data-lightbox="roadtrip" data-title="AUTOP 2020">
+                                    <img src="assets/img/Fotos tratadas/129A3772.jpg" alt="" class="tab-pane-gallery-img">
+                                </a>           
+                            </div>
+                            <h2 class="tab-pane-title orangeText mt-3">AUTOP 2020</h2>
+                            <div class="row">
+                                <div class="col-md-4 tab-pane-info">
+                                    <img src="assets/icons/calendar.svg" alt="" class="tab-pane-info-icon">
+                                    <span class="tab-pane-info-icon">12/08/2020 a 15/08/2020</span>
+                                </div>
+                                <div class="col-md-6 tab-pane-info">
+                                    <img src="assets/icons/pin.svg" alt="" class="tab-pane-info-icon">
+                                    <span class="tab-pane-info-icon">FIEC – Federação da Indústria do Estado do Ceará</span>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-6 tab-pane-more">
+                                    <h5 class="tab-pane-more-subtitle orangeText">Realização</h5>
+                                    <p class="tab-pane-more-realization">Sistema Sincopeças Assopeças (CE)</p>
+                                </div>
+                                <div class="col-md-6 tab-pane-more">
+                                    <h5 class="tab-pane-more-subtitle orangeText">Mídias Sociais</h5>
+                                    <ul class="tab-pane-more-social">
+                                        <a href="#0" class="tab-pane-more-social-link">
+                                            <li class="tab-pane-more-social-item">
+                                                <i class="fab fa-facebook"></i>
+                                            </li>
+                                        </a>
+                                        <a href="" class="tab-pane-more-social-link">
+                                            <li class="tab-pane-more-social-item">
+                                                <i class="fab fa-instagram"></i>
+                                            </li>
+                                        </a>
+                                        <a href="" class="tab-pane-more-social-link">
+                                            <li class="tab-pane-more-social-item">
+                                                www.autopceara.com.br
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-9">
-                            <div class="tab-content" id="v-pills-tabContent">
-                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
-                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
-                            </div>
+                        <div class="tab-pane fade" id="v-pills-conenx" role="tabpanel" aria-labelledby="v-pills-conenx-tab">
                         </div>
+                        <div class="tab-pane fade" id="v-pills-eba2020" role="tabpanel" aria-labelledby="v-pills-eba2020-tab">...</div>
                     </div>
                 </div>
             </div>
@@ -401,6 +473,8 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/slick-carousel/slick/slick.js"></script>
+    <script src="node_modules/lightbox2/dist/js/lightbox.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,106 @@
+.for-who {
+    padding: 64px 0;
+    background-color: $purple;
+
+    &-year {
+        background-color: $orange;
+        color: #fff;
+        padding: 8px 16px;
+        font-weight: 700;
+        font-family: $sifonn;
+    }
+
+    &-pills {
+        font-family: $sifonn;
+
+        .nav-link {
+            text-transform: uppercase;
+            color: $orange;
+            background-color: #fff;
+            padding: 24px 16px;
+            border-radius: 0;
+            margin-bottom: 4px;
+            position: relative;
+        }
+
+        .nav-link.active {
+            color: #fff;
+            background-color: $orange;
+
+            &::after {
+                content: " ";
+                width: 8px;
+                height: 16px;
+                background-image: url('../assets/icons/triangle.svg');
+                background-size: contain;
+                position: absolute;
+                right: -8px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .tab-pane {
+            background-color: #fff;
+            padding: 16px;
+            position: relative;
+
+            .slick-slide {
+                width: auto !important;
+            }
+
+            &-gallery {
+                width: 100%;
+
+                &-img {
+                    height: 156px;
+                    margin: 0;
+                }
+            }
+
+            &-info {
+                font-family: $montserrat;
+                font-size: 12px;
+                font-weight: 500;
+                color: $purple;
+                
+                &-icon {
+                    margin-right: 4px;
+                }
+            }
+
+            &-more {
+                &-subtitle {
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+
+                &-realization {
+                    font-family: $montserrat;
+                    font-size: 14px;
+                    color: $purple;
+                }
+
+                &-social {
+                    display: flex;
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    font-family: $montserrat;
+
+                    &-link {
+                        margin-right: 8px;
+                        text-decoration: none;
+                        color: $purple;
+                        transition: all .2s ease;
+
+                        &:hover {
+                            color: $orange;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
